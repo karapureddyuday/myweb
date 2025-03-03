@@ -42,10 +42,12 @@
   	</distributionManagement>
 	
 	<pluginRepositories>
-	    <pluginRepository>    
-		<groupId>org.apache.maven.plugins</groupId>
+	    <pluginRepository>   
     		<artifactId>maven-war-plugin</artifactId>
-    		<version>3.3.2</version> <!-- Upgrade to latest stable version -->
+		<id>maven1</id>
+		<name>Maven.org</name>
+    		<version>3.3.2</version>
+		<url>http://repo1.maven.org/maven3.3.2</url>
 	    </pluginRepository>
 	</pluginRepositories>
 
