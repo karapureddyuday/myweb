@@ -1,53 +1,55 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>in.javahome</groupId>
-	<artifactId>myweb</artifactId>
-	<packaging>war</packaging>
-	<version>8.2.0</version>
-	<name>Java Home myweb</name>
-	<url>http://maven.apache.org</url>
-	
-	<properties>
-		<docker.image.prefix>kammana</docker.image.prefix>
-		<sonar.host.url>http://18.182.25.84:9000/</sonar.host.url>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-                <maven.compiler.source>1.7</maven.compiler.source>
-                <maven.compiler.target>1.7</maven.compiler.target>
-		
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>com.yourcompany</groupId>  <!-- Change to your group ID -->
+    <artifactId>myweb</artifactId>
+    <packaging>war</packaging>
+    <version>1.0.0</version>  <!-- Your project version -->
+    <name>My Web Application</name>
+    <url>http://your-website.com</url>
 
-	</properties>
-	<dependencies>
+    <properties>
+        <docker.image.prefix>your-docker-user</docker.image.prefix> <!-- Change Docker user -->
+        <sonar.host.url>http://your-sonarqube-server:9000/</sonar.host.url> <!-- Change SonarQube URL -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>  <!-- Set Java version -->
+        <maven.compiler.target>11</maven.compiler.target>  <!-- Set Java version -->
+    </properties>
 
-		
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>  <!-- Use latest JUnit version -->
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
-	</dependencies>
-	
-	<distributionManagement>
-		 <snapshotRepository>
-		    <id>nexusRepo</id>
-		    <url>http://54.238.70.96:8081/repository/sample-snapshots/</url>
-		 </snapshotRepository>
-		
-		<repository>
-		    <id>nexusRepo</id>
-		    <url>http://54.238.70.96:8081/repository/sample-releases/</url>
-		</repository>
-  	</distributionManagement>
-	
-	<pluginRepositories>
-	    <pluginRepository>   
-		<id>maven1</id>
-		<name>Maven.org</name>
-		<url>http://repo1.maven.org/maven3.8.7</url>
-	    </pluginRepository>
-	</pluginRepositories>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexusRepo</id>
+            <url>http://your-nexus-server:8081/repository/sample-snapshots/</url> <!-- Change Nexus URL -->
+        </snapshotRepository>
+        <repository>
+            <id>nexusRepo</id>
+            <url>http://your-nexus-server:8081/repository/sample-releases/</url> <!-- Change Nexus URL -->
+        </repository>
+    </distributionManagement>
 
-	
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
