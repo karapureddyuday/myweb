@@ -45,7 +45,6 @@
 	    <pluginRepository>   
 		<id>maven1</id>
 		<name>Maven.org</name>
-    		<version>3.3.2</version>
 		<url>http://repo1.maven.org/maven3.3.2</url>
 	    </pluginRepository>
 	</pluginRepositories>
